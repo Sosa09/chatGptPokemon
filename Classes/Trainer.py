@@ -1,11 +1,11 @@
 from Player import Player
 import pygame, sys
 class Trainer(Player):
-    def __init__(self):
-        super().__init__()
-        self.image.fill("purple")
+    def __init__(self, name):
+        super().__init__(self)
+        self.image = pygame.transform.scale(pygame.image.load("./Assets/trainers/ash.png"), (50,50))
         self.rect.topleft = (10,10)
-
+        self.name = name
         
     def update(self):
         #handle user key pressed events and set colission detection to not pass the screen size !
